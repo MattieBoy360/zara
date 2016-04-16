@@ -129,6 +129,7 @@ html, body {
   background-image: url(../img/stars.jpg);
   background-size: cover;
   background-position: center;
+  margin-bottom: 0;
 }
 /* line 123, ../sass/main.scss */
 #skills:before {
