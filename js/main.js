@@ -5,6 +5,24 @@ $(document).ready(function(){
     new WOW().init();
     var fontSize = $('body').css('font-size');
 
+    $(function() {
+        $('button.navbar-toggle').bind('click', function(event) {
+            if ($(document).scrollTop() < 50) {
+                if(!$(".navbar-fixed-top").hasClass('affix')) {
+                    $(".navbar-fixed-top").addClass("affix");
+                }
+                else {
+                    $(".navbar-fixed-top").removeClass("affix");
+                    $('button.navbar-toggle').off('hover');
+                    
+                }
+            }
+
+            event.preventDefault();
+
+        });
+    });
+
 
     $(function() {
         $('a.page-scroll').bind('click', function(event) {
@@ -30,14 +48,15 @@ $(document).ready(function(){
             maxFontSize:  '64px',
         }
     );
+
     $("section h1").fitText(
         1.2, {
             minFontSize: '32px',
             maxFontSize:  '64px',
         }
     );
-    $("h2").fitText(
-        1.2, {
+    $("#header h2").fitText(
+        3, {
             minFontSize: '16px',
             maxFontSize:  '32px',
         }
@@ -58,6 +77,7 @@ $(document).ready(function(){
             $("#navbar > ul > li > a[href='#" + id + "']").addClass('active');
         }
     });
+    var charts = $('.easyPieChart');
     $(window).scroll(function() { // check if scroll event happened
         if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
             $(".navbar-fixed-top").addClass("affix"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
@@ -76,26 +96,36 @@ $(document).ready(function(){
                 $("#navbar > ul > li > a[href='#" + id + "']").addClass('active');
             }
         });
+
+
     });
     $(".rotate").textrotator({
         animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
         separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
         speed: 3000 // How many milliseconds until the next word show.
     });
-    var charts = $('.easyPieChart');
-    charts.easyPieChart({
-        animate: 1000,
-        onStep: function(old, to, current) {
-            $('.chart').find('span').text(~~current);
-        }
+
+    $('#skills').find('.easyPieChart').each(function() {
+        $(this).one('inview', function (isInView) {
+            if(isInView) {
+                console.log("called");
+               $(this).easyPieChart({
+                    animate: 1000,
+                    scaleColor: false,
+                    lineWidth: 10,
+                    lineCap: 'square',
+                    barColor: '#18bc9c',
+                    onStep: function (old, to, current) {
+                        $(this.el).find('span').text(~~current);
+                    },
+                });
+            }
+        });
     });
 
-    setInterval(function() {
-        var num = Math.floor((Math.random()) * 100)
-        charts.each(function() {
-            $(this).data('easyPieChart').update(num);
-        });
-    }, 5000);
+
+
+
 
 
 });
