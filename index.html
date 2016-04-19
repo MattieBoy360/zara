@@ -3,22 +3,23 @@
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
 	<title>Matthew Riley - Developer | Journalist</title>
-
-
+	<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/simpletextrotator.css">
-
+	<link rel="stylesheet" href="css/animate.css">
 
 </head>
 <body>
+<div id="loader">
+</div>
 	<nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -27,24 +28,27 @@
 			<a class="navbar-brand" href="#">Matthew Riley</a>
 		</div><!-- nav header -->
 
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">About</a></li>
-				<li><a href="#">Portfolio</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Contact</a></li>
+				<li><a class="page-scroll" href="#about">About</a></li>
+				<li><a class="page-scroll" href="#portfolio">Portfolio</a></li>
+				<li><a class="page-scroll" href="#journalism">Journalism</a></li>
+				<li><a class="page-scroll" href="#achievements">Achievements</a></li>
+				<li><a class="page-scroll" href="#footer">Contact</a></li>
 			</ul>
 		</div> <!-- nav-right -->
 	</div>
 </nav><!-- nav -->
+
 	<div id="header">
 		<div class="header-content">
 			<div class="container text-center">
 				<div class="row">
 					<div class="col-lg-12">
-						<img id="profile" class="img-circle" src="img/profile.jpg" />
+						<img id="profile" class="img-circle wow zoomIn" src="img/profile.jpg" />
 						<h1>Hi I'm Matthew Riley</h1>
-						<h2><span class="rotate shadow">Developer, Reporter, Commentator, Photographer</span></h2>
+						<hr>
+						<h2>Birmingham based <span class="rotate">developer, reporter, commentator, content producer</span> currently studying at the <br>University of Birmingham.</h2>
 						<i class="fa fa-arrow-down fa-3x"></i>
 
 					</div>
@@ -54,26 +58,101 @@
 			
 	</div><!-- header -->
 
+	<section id="portfolio">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-4 col-sm-6 no-gutter">
+					<a href="#" class="port-box">
+						<img class="img-responsive port-img" src="img/fe.png" />
+						<div class="port-capt">
+							<div class="port-cont">
+								<h6>Website</h6>
+								<h3>Burn FM</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 col-sm-6 no-gutter">
+					<a href="https://www.youtube.com/watch?v=IAik2xvVNRo" class="port-box">
+						<img class="img-responsive port-img" src="img/xplosion.png" />
+						<div class="port-capt">
+							<div class="port-cont">
+								<h6>Commentary</h6>
+								<h3>xpLosION 2015: Birmingham Lions vs. Imperial Cougars</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 col-sm-6 no-gutter">
+					<a href="#" class="port-box">
+						<img class="img-responsive port-img" src="img/satirist3.png" />
+						<div class="port-capt">
+							<div class="port-cont">
+								<h6>Website</h6>
+								<h3>The Satirist</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 col-sm-6 no-gutter">
+					<a href="#" class="port-box">
+						<img class="img-responsive port-img" src="img/bah.png" />
+						<div class="port-capt">
+							<div class="port-cont">
+								<h6>Website</h6>
+								<h3>Burn Against Humanity</h3>
+							</div>
+						</div>
+					</a>
+				</div>
 
+				<div class="col-lg-4 col-sm-6 no-gutter">
+					<a href="#" class="port-box">
+						<img class="img-responsive port-img" src="img/bears.jpg" />
+						<div class="port-capt">
+							<div class="port-cont">
+								<h6>Reporting/Photography</h6>
+								<h3>Natwest T20 Blast: Birmingham Bears</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-lg-4 col-sm-6 no-gutter">
+					<a href="#" class="port-box">
+						<img class="img-responsive port-img" src="img/canal.jpg" />
+						<div class="port-capt">
+							<div class="port-cont">
+								<h6>Directing/Editing/Producing</h6>
+								<h3>Burn FM Presents: Canal Sessions - IsaacO</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
 
-	<section id="web" class="text-section">
+		</div>
+
+	</section>
+
+	<section id="about">
 		<div class="container">
 			<div class="header row text-center">
 				<div class="col-lg-12">
-					<h1>Web Developer</h1>
-					<h3>I even did this website...</h3>
+					<h1>About Me</h1>
 					<hr>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-5">
-					<img src="img/web.jpg" />
+				<div class="col-lg-5 visible-lg">
+					<img class="img-responsive" src="img/group.jpg" />
 				</div>
-				<div class="col-md-7">
-					<h4>Not a liar</h4>
-					<p>I know lying is wrong, but if the elephant man came in now in a blouse with some make up on, and said "how do I look?" Would you say — bearing in mind he's depressed and has respiratory problems — would you say "go and take that blusher off you mis-shapen headed elephant tranny"? No. You'd say "You look nice... John"</p>
-					<h4>Who's the best lord?</h4>
-					<p>Ok, If you’ve just joined us, we’re talking about who is the best Lord. Lord of the Rings, of the Dance or of the Flies, that’s tonight’s hot topic. Ok, the votes are closed and clearly the rings and the flies have been roundly trounced by the quick feet of blouse wearing tycoon Michael Flatly. Flatly my dear, I don’t riverdance.</p>
+				<div class="col-lg-7 col-md-12">
+					<h3>Hello, I'm Matt!</h3>
+					<h4>21 year old Computer Science student, graduating in July 2016, with a passion for full-stack development and journalism.</h4>
+					<hr class="head-divide">
+					<p>For three years, I have been a member of Burn FM, the student radio station at the University of Birmingham. For two of those years, I served on the committee as webmaster, completely redesigning and restructuring the website for the betterment of the soceity, still in use today.</p>
+					<p>Also during my time at Burn FM, I have represented the society as a reporter, providing sports analysis for television broadcasts as well as web content. I have also had the opportunity to interview many modern sports stars, including Brendon McCullum and Chris Woakes.</p>
+					<div class="text-center"><a href="#"><button class="btn btn-success"><i class="fa fa-download"></i> Download CV</button></a></div>
 				</div>
 			</div>
 		</div>
@@ -129,11 +208,12 @@
 		</div>
 	</section>
 
-	<section id="journalism" class="text-section">
+	<section id="journalism">
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-lg-12">
 					<h1>Journalism</h1>
+					<hr>
 				</div>
 			</div>
 			<div class="row text-center">
@@ -142,33 +222,63 @@
 					<p>I know lying is wrong, but if the elephant man came in now in a blouse with some make up on, and said "how do I look?" Would you say — bearing in mind he's depressed and has respiratory problems — would you say "go and take that blusher off you mis-shapen headed elephant tranny"? No. You'd say "You look nice... John"</p>
 					<h4>Who's the best lord?</h4>
 					<p>Ok, If you’ve just joined us, we’re talking about who is the best Lord. Lord of the Rings, of the Dance or of the Flies, that’s tonight’s hot topic. Ok, the votes are closed and clearly the rings and the flies have been roundly trounced by the quick feet of blouse wearing tycoon Michael Flatly. Flatly my dear, I don’t riverdance.</p>
-					<a class="btn btn-large btn-info" href="#">Portfolio</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section id="portfolio" class="alternate">
+
+	<section id="achievements">
 		<div class="container">
 			<div class="row text-center">
 				<div class="col-lg-12">
-					<h1>Portfolio</h1>
+					<h1>Achievements</h1>
+					<hr>
 				</div>
 			</div>
 			<div class="row text-center">
-				<div class="col-lg-12"><h2>Web</h2></div>
-				<div class="col-sm-6 col-lg-3">
-					<h3>Burn FM</h3>
+				<div class="col-md-6">
+					<img width="100px" class="wow bounceIn center-block" src="img/medal.svg" />
+					<h3>BUCS Nationals 2014 - Best Written Coverage</h3>
+					<p>As part of Burn FM Sport's coverage of the Gatorade BUCS Nationals 2014, I ran a liveblog which won best written content against other media outlets.</p>
+					<a href="#"><button class="btn btn-info">Link</button></a>
 				</div>
-				<div class="col-sm-6 col-lg-3">
-					<h3>Burn Against Humanity</h3>
+				<div class="col-md-6">
+					<img width="100px" class="wow bounceIn center-block img-responsive" data-wow-delay=".1s" src="img/cup.svg" />
+					<h3>Order of the BurnFMpire</h3>
+					<p>An award given by Burn FM, the University of Birmingham's student radio, recognises an individual's outstanding contribution to the society. In 2014, I was awarded the honour for designing, building and maintaining their website.</p>
 				</div>
-				<div class="col-sm-6 col-lg-3">
-					<h3>The Satirist</h3>
+
+
+			</div>
+		</div>
+	</section>
+
+	<section id="footer" class="alternate">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-lg-4">
+					<h3>Links</h3>
+					<a href="#" class="social-link"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href="#" class="social-link"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href="#" class="social-link"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 				</div>
-				<div class="col-sm-6 col-lg-3">
-					<h3>Free Radio</h3>
+				<div class="col-lg-4">
+					<h3>Contact</h3>
+					<i class="fa fa-envelope-o fa-2x fa-fw" aria-hidden="true"></i><br>
+					<a href="mailto:contact@mattriley.me.uk?subject=Hello!">contact@mattriley.me.uk</a>
 				</div>
+				<div class="col-lg-4">
+					<h3>Credits</h3>
+					<p>Some images used on this page courtesy of Unsplash. Flat icons designed and provided by Freepik.</p>
+				</div>
+
+			</div>
+			<div class="row text-center">
+				<div class="col-sm-6 col-lg-12">
+					<p>Copyright &copy; Matthew Riley 2016</p>
+				</div>
+
 
 
 			</div>
@@ -176,54 +286,16 @@
 
 	</section>
 
+
 </body>
-<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="js/textFit.min.js"></script>
 <script src="js/jquery.rotator.min.js"></script>
 <script src="js/jquery.easypie.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-	var fontSize = $('body').css('font-size');
-	$("h1").fitText(
-			1.2, {
-				minFontSize: '16px',
-				maxFontSize:  '64px',
-			}
-	);
-	if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
-		$(".navbar-fixed-top").addClass("affix"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
-	} else {
-		$(".navbar-fixed-top").removeClass("affix"); // if not, change it back to transparent
-	}
-	$(window).scroll(function() { // check if scroll event happened
-		if ($(document).scrollTop() > 50) { // check if user scrolled more than 50 from top of the browser window
-			$(".navbar-fixed-top").addClass("affix"); // if yes, then change the color of class "navbar-fixed-top" to white (#f8f8f8)
-		} else {
-			$(".navbar-fixed-top").removeClass("affix"); // if not, change it back to transparent
-		}
-	});
-    $(".rotate").textrotator({
-  animation: "fade", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-  separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-  speed: 3000 // How many milliseconds until the next word show.
-});
-    var charts = $('.easyPieChart');
-     charts.easyPieChart({
-            animate: 1000,
-            onStep: function(old, to, current) {
-            	$('.chart').find('span').text(~~current);
-            }
-        });
-
-      setInterval(function() {
-      	var num = Math.floor((Math.random()) * 100)
-      	charts.each(function() {
-      		$(this).data('easyPieChart').update(num);
-      	});  
-    }, 5000);
-
-
-  });
-</script>
+<script src="js/wow.min.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/loader.js"></script>
 </html>
